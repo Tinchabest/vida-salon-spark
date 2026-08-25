@@ -168,10 +168,33 @@
 @layer base {
   body {
     font-family: var(--font-body);
-    font-weight: 300;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     font-family: var(--font-display);
-    font-weight: 300;
+    font-weight: 500;
+    letter-spacing: -0.025em;
   }
+}
+
+@utility shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+@utility surface-grad {
+  background-image: linear-gradient(
+    160deg,
+    oklch(0.988 0.005 85),
+    oklch(0.94 0.022 78)
+  );
+}
+
+@keyframes vida-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+
+@utility rise {
+  animation: vida-rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
