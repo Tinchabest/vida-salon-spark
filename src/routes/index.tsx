@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Clock, MapPin, Phone, Mail, Instagram, Facebook, ArrowUpRight } from "lucide-react";
+import { Clock, MapPin, Phone, Mail, ArrowUpRight } from "lucide-react";
 
 import logo from "@/assets/logo.jpg.asset.json";
 import blondeBalayage from "@/assets/work-blonde-balayage.jpg.asset.json";
@@ -25,8 +25,49 @@ export const Route = createFileRoute("/")({
         content:
           "Balayage, bojanje, šišanje i svečane frizure u srcu Zagreba. Domašinečka ul. 4.",
       },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { property: "og:locale", content: "hr_HR" },
       { property: "og:image", content: copperBlonde.url },
       { name: "twitter:image", content: copperBlonde.url },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HairSalon",
+          name: "VIDA Hairdressing",
+          description:
+            "Frizerski salon u Zagrebu — balayage, bojanje, šišanje, svečane i svadbene frizure te tretmani njege kose.",
+          image: copperBlonde.url,
+          telephone: "+38515621695",
+          email: "vidahairdressing@gmail.com",
+          priceRange: "$$",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Domašinečka ul. 4",
+            addressLocality: "Zagreb",
+            postalCode: "10000",
+            addressCountry: "HR",
+          },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: 45.8036,
+            longitude: 16.0048,
+          },
+          openingHoursSpecification: [
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Monday", opens: "13:00", closes: "21:00" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Tuesday", opens: "08:00", closes: "15:00" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Wednesday", opens: "13:00", closes: "21:00" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Thursday", opens: "13:00", closes: "21:00" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Friday", opens: "08:00", closes: "16:00" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "08:00", closes: "13:00" },
+          ],
+          areaServed: { "@type": "City", name: "Zagreb" },
+        }),
+      },
     ],
   }),
   component: Index,
