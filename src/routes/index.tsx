@@ -136,6 +136,7 @@ function Index() {
               alt="VIDA Hairdressing logo"
               className="h-9 w-auto mix-blend-multiply"
             />
+            <span className="hidden font-display text-lg tracking-tight sm:inline">VIDA Hairdressing</span>
           </a>
           <nav className="hidden items-center gap-1 md:flex">
             {navLinks.map((l) => (
