@@ -1,14 +1,54 @@
-# Welcome to your Lovable project
+# Vida Hairdresser Website
+
+napravi nam web stranicu za ovu kompaniju evo par stvari 
+VIDA hairdressing
+Domašinečka ul. 4, 10000, Zagreb
+Tuesday
+
+8 AM–3 PM
+
+Wednesday
+
+1–9 PM
+
+Thursday
+
+1–9 PM
+
+Friday
+
+8 AM–4 PM
+
+Saturday
+
+8 AM–1 PM
+
+Sunday
+
+Closed
+
+Monday
+
+1–9 PM
+015621695
+ovo je njihov facebook
+https://www.facebook.com/VidaHairdressing
+vidahairdressing@gmail.com
+dodaj ove slike koje sam ti poslao 
+i ovo je instagram 
+https://www.instagram.com/vida_hairdressing/?hl=en
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://vida-salon-spark.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/9573a1c7-0b2c-42f5-aeee-2752dfafcc2d).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +60,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
