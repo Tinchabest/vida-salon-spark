@@ -1,14 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Clock, MapPin, Phone, Mail, ArrowUpRight } from "lucide-react";
 
-import logo from "@/assets/logo.jpg.asset.json";
-import blondeBalayage from "@/assets/work-blonde-balayage.jpg.asset.json";
-import braidedUpdo from "@/assets/work-braided-updo.jpg.asset.json";
-import bridalPearls from "@/assets/work-bridal-pearls.jpg.asset.json";
-import brondeWaves from "@/assets/work-bronde-waves.jpg.asset.json";
-import copperBlonde from "@/assets/work-copper-blonde.jpg.asset.json";
-import mauveWaves from "@/assets/work-mauve-waves.jpg.asset.json";
-import roseBob from "@/assets/work-rose-bob.jpg.asset.json";
+import logo from "@/assets/logo.jpg";
+import blondeBalayage from "@/assets/work-blonde-balayage.jpg";
+import braidedUpdo from "@/assets/work-braided-updo.jpg";
+import bridalPearls from "@/assets/work-bridal-pearls.jpg";
+import brondeWaves from "@/assets/work-bronde-waves.jpg";
+import copperBlonde from "@/assets/work-copper-blonde.jpg";
+import mauveWaves from "@/assets/work-mauve-waves.jpg";
+import roseBob from "@/assets/work-rose-bob.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,8 +28,8 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
       { property: "og:locale", content: "hr_HR" },
-      { property: "og:image", content: copperBlonde.url },
-      { name: "twitter:image", content: copperBlonde.url },
+      { property: "og:image", content: copperBlonde },
+      { name: "twitter:image", content: copperBlonde },
     ],
     links: [{ rel: "canonical", href: "/" }],
     scripts: [
@@ -41,7 +41,7 @@ export const Route = createFileRoute("/")({
           name: "VIDA Hairdressing",
           description:
             "Frizerski salon u Zagrebu — balayage, bojanje, šišanje, svečane i svadbene frizure te tretmani njege kose.",
-          image: copperBlonde.url,
+          image: copperBlonde,
           telephone: "+38515621695",
           email: "vidahairdressing@gmail.com",
           priceRange: "$$",
@@ -107,13 +107,13 @@ const services = [
 ];
 
 const gallery = [
-  { src: copperBlonde.url, alt: "Bakreno plavi balayage na dugoj valovitoj kosi" },
-  { src: roseBob.url, alt: "Rose gold bob s valovima" },
-  { src: bridalPearls.url, alt: "Svadbena punđa s bisernim ukosnicama" },
-  { src: blondeBalayage.url, alt: "Svijetlo plavi balayage na dugoj kosi" },
-  { src: mauveWaves.url, alt: "Mauve ljubičasti tonovi na valovitoj kosi" },
-  { src: brondeWaves.url, alt: "Bronde balayage s mekim valovima" },
-  { src: braidedUpdo.url, alt: "Pletena svečana punđa na tamnoj kosi" },
+  { src: copperBlonde, alt: "Bakreno plavi balayage na dugoj valovitoj kosi" },
+  { src: roseBob, alt: "Rose gold bob s valovima" },
+  { src: bridalPearls, alt: "Svadbena punđa s bisernim ukosnicama" },
+  { src: blondeBalayage, alt: "Svijetlo plavi balayage na dugoj kosi" },
+  { src: mauveWaves, alt: "Mauve ljubičasti tonovi na valovitoj kosi" },
+  { src: brondeWaves, alt: "Bronde balayage s mekim valovima" },
+  { src: braidedUpdo, alt: "Pletena svečana punđa na tamnoj kosi" },
 ];
 
 const navLinks = [
@@ -132,10 +132,11 @@ function Index() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5 sm:px-8">
           <a href="#top" className="flex items-center gap-3">
             <img
-              src={logo.url}
+              src={logo}
               alt="VIDA Hairdressing logo"
               className="h-9 w-auto mix-blend-multiply"
             />
+            <span className="hidden font-display text-lg tracking-tight sm:inline">VIDA Hairdressing</span>
           </a>
           <nav className="hidden items-center gap-1 md:flex">
             {navLinks.map((l) => (
@@ -212,14 +213,14 @@ function Index() {
             <div className="relative rise">
               <div className="overflow-hidden rounded-[2rem] shadow-soft">
                 <img
-                  src={copperBlonde.url}
+                  src={copperBlonde}
                   alt="Bakreno plavi balayage rađen u salonu VIDA Hairdressing"
                   className="aspect-[4/5] w-full object-cover"
                   loading="eager"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 hidden w-44 overflow-hidden rounded-2xl border-4 border-background shadow-soft md:block">
-                <img src={roseBob.url} alt="Rose gold bob frizura" className="aspect-square w-full object-cover" />
+                <img src={roseBob} alt="Rose gold bob frizura" className="aspect-square w-full object-cover" />
               </div>
               <div className="absolute -right-4 top-8 hidden rounded-2xl border border-border bg-card/90 px-4 py-3 backdrop-blur lg:block">
                 <p className="text-xs text-muted-foreground">Danas</p>
@@ -356,7 +357,7 @@ function Index() {
 
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-5 py-10 text-center sm:px-8">
-          <img src={logo.url} alt="VIDA Hairdressing" className="h-8 w-auto mix-blend-multiply" />
+          <img src={logo} alt="VIDA Hairdressing" className="h-8 w-auto mix-blend-multiply" />
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} VIDA Hairdressing · Zagreb
           </p>
