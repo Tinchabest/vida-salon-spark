@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Clock, MapPin, Phone, Mail, Instagram, Facebook, ArrowUpRight } from "lucide-react";
+import { Clock, MapPin, Phone, Mail, ArrowUpRight } from "lucide-react";
 
 import logo from "@/assets/logo.jpg.asset.json";
 import blondeBalayage from "@/assets/work-blonde-balayage.jpg.asset.json";
@@ -25,8 +25,49 @@ export const Route = createFileRoute("/")({
         content:
           "Balayage, bojanje, šišanje i svečane frizure u srcu Zagreba. Domašinečka ul. 4.",
       },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { property: "og:locale", content: "hr_HR" },
       { property: "og:image", content: copperBlonde.url },
       { name: "twitter:image", content: copperBlonde.url },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HairSalon",
+          name: "VIDA Hairdressing",
+          description:
+            "Frizerski salon u Zagrebu — balayage, bojanje, šišanje, svečane i svadbene frizure te tretmani njege kose.",
+          image: copperBlonde.url,
+          telephone: "+38515621695",
+          email: "vidahairdressing@gmail.com",
+          priceRange: "$$",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Domašinečka ul. 4",
+            addressLocality: "Zagreb",
+            postalCode: "10000",
+            addressCountry: "HR",
+          },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: 45.8036,
+            longitude: 16.0048,
+          },
+          openingHoursSpecification: [
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Monday", opens: "13:00", closes: "21:00" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Tuesday", opens: "08:00", closes: "15:00" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Wednesday", opens: "13:00", closes: "21:00" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Thursday", opens: "13:00", closes: "21:00" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Friday", opens: "08:00", closes: "16:00" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "08:00", closes: "13:00" },
+          ],
+          areaServed: { "@type": "City", name: "Zagreb" },
+        }),
+      },
     ],
   }),
   component: Index,
@@ -212,19 +253,9 @@ function Index() {
 
         {/* GALERIJA */}
         <section id="galerija" className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-28">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <div>
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary">Galerija</p>
-              <h2 className="mt-3 text-4xl sm:text-5xl">Naši radovi</h2>
-            </div>
-            <a
-              href="https://www.instagram.com/vida_hairdressing/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm transition-colors hover:bg-secondary"
-            >
-              <Instagram className="h-4 w-4" /> Više na Instagramu
-            </a>
+          <div>
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary">Galerija</p>
+            <h2 className="mt-3 text-4xl sm:text-5xl">Naši radovi</h2>
           </div>
           <div className="mt-10 columns-1 gap-5 sm:columns-2 lg:columns-3 [&>figure]:mb-5">
             {gallery.map((g) => (
@@ -292,24 +323,6 @@ function Index() {
                 >
                   <Mail className="h-4 w-4 shrink-0 text-primary" /> vidahairdressing@gmail.com
                 </a>
-                <div className="grid grid-cols-2 gap-3">
-                  <a
-                    className="flex items-center justify-center gap-2 rounded-2xl border border-border p-4 text-sm transition-colors hover:bg-secondary"
-                    href="https://www.instagram.com/vida_hairdressing/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Instagram className="h-4 w-4 text-primary" /> Instagram
-                  </a>
-                  <a
-                    className="flex items-center justify-center gap-2 rounded-2xl border border-border p-4 text-sm transition-colors hover:bg-secondary"
-                    href="https://www.facebook.com/VidaHairdressing"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Facebook className="h-4 w-4 text-primary" /> Facebook
-                  </a>
-                </div>
               </div>
               <div className="mt-6 overflow-hidden rounded-2xl border border-border">
                 <iframe
