@@ -253,19 +253,9 @@ function Index() {
 
         {/* GALERIJA */}
         <section id="galerija" className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-28">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <div>
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary">Galerija</p>
-              <h2 className="mt-3 text-4xl sm:text-5xl">Naši radovi</h2>
-            </div>
-            <a
-              href="https://www.instagram.com/vida_hairdressing/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm transition-colors hover:bg-secondary"
-            >
-              <Instagram className="h-4 w-4" /> Više na Instagramu
-            </a>
+          <div>
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary">Galerija</p>
+            <h2 className="mt-3 text-4xl sm:text-5xl">Naši radovi</h2>
           </div>
           <div className="mt-10 columns-1 gap-5 sm:columns-2 lg:columns-3 [&>figure]:mb-5">
             {gallery.map((g) => (
@@ -333,24 +323,6 @@ function Index() {
                 >
                   <Mail className="h-4 w-4 shrink-0 text-primary" /> vidahairdressing@gmail.com
                 </a>
-                <div className="grid grid-cols-2 gap-3">
-                  <a
-                    className="flex items-center justify-center gap-2 rounded-2xl border border-border p-4 text-sm transition-colors hover:bg-secondary"
-                    href="https://www.instagram.com/vida_hairdressing/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Instagram className="h-4 w-4 text-primary" /> Instagram
-                  </a>
-                  <a
-                    className="flex items-center justify-center gap-2 rounded-2xl border border-border p-4 text-sm transition-colors hover:bg-secondary"
-                    href="https://www.facebook.com/VidaHairdressing"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Facebook className="h-4 w-4 text-primary" /> Facebook
-                  </a>
-                </div>
               </div>
               <div className="mt-6 overflow-hidden rounded-2xl border border-border">
                 <iframe
