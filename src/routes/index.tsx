@@ -83,29 +83,6 @@ const hours = [
   { day: "Nedjelja", time: "Zatvoreno" },
 ];
 
-const services = [
-  {
-    n: "01",
-    title: "Boja i balayage",
-    text: "Balayage, airtouch, pramenovi i korekcije boje — meki prijelazi rađeni po tvojoj kosi.",
-  },
-  {
-    n: "02",
-    title: "Šišanje i styling",
-    text: "Ženska i muška šišanja, fen frizure i valovi koji drže cijeli dan.",
-  },
-  {
-    n: "03",
-    title: "Svečane frizure",
-    text: "Punđe, pletenice i svadbene frizure s detaljima — za vjenčanja i posebne prigode.",
-  },
-  {
-    n: "04",
-    title: "Njega kose",
-    text: "Tretmani obnove, hidratacije i zaštite boje profesionalnom kozmetikom.",
-  },
-];
-
 const gallery = [
   { src: copperBlonde.url, alt: "Bakreno plavi balayage na dugoj valovitoj kosi" },
   { src: roseBob.url, alt: "Rose gold bob s valovima" },
@@ -117,7 +94,6 @@ const gallery = [
 ];
 
 const navLinks = [
-  { href: "#usluge", label: "Usluge" },
   { href: "#galerija", label: "Galerija" },
   { href: "#radno-vrijeme", label: "Radno vrijeme" },
   { href: "#kontakt", label: "Kontakt" },
@@ -225,28 +201,6 @@ function Index() {
                 <p className="text-xs text-muted-foreground">Danas</p>
                 <p className="text-sm font-medium">{hours[todayIdx]?.time}</p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* USLUGE */}
-        <section id="usluge" className="border-y border-border surface-grad">
-          <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-28">
-            <div className="max-w-2xl">
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary">Usluge</p>
-              <h2 className="mt-3 text-4xl sm:text-5xl">Sve za kosu, na jednom mjestu</h2>
-            </div>
-            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {services.map((s) => (
-                <article
-                  key={s.title}
-                  className="group rounded-3xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:shadow-soft"
-                >
-                  <span className="text-xs font-medium tracking-widest text-primary">{s.n}</span>
-                  <h3 className="mt-4 text-xl">{s.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
-                </article>
-              ))}
             </div>
           </div>
         </section>
